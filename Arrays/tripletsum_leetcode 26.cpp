@@ -1,5 +1,5 @@
 //leetcode 26 
-
+// Triplet Sum
 #include<iostream>
 #include<vector>
 #include<algorithm>
