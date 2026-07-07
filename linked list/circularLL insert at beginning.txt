@@ -1,0 +1,4 @@
+//circular link list insert at beginning
+
+#include<iostream>
+using namespace std;
