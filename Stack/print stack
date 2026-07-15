@@ -1,0 +1,16 @@
+//print stack 123
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int stack[100];
+    int top = -1;
+    stack[++top] = 1;
+    stack[++top] = 2;
+    stack[++top] = 3;
+    while (top != -1) {
+        cout << stack[top--] << " ";
+    }
+    return 0;
+}

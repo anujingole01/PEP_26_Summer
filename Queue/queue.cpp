@@ -13,7 +13,23 @@ public:
     bool isEmpty();
     bool isFull();
 };
-void enqueue(int x) {
+
+MyQueue::MyQueue(int n) {
+    size = n;
+    arr = new int[size];
+    front = -1;
+    rear = -1;
+}
+
+bool MyQueue::isEmpty() {
+    return front == -1;
+}
+
+bool MyQueue::isFull() {
+    return ((rear + 1) % size) == front;
+}
+
+void MyQueue::enqueue(int x) {
     if (isFull()) {
         cout << "Queue is full\n";
         return;
@@ -24,10 +40,11 @@ void enqueue(int x) {
         front = 0;
     }
 }
-void dequeue() {
+
+int MyQueue::dequeue() {
     if (isEmpty()) {
         cout << "Queue is empty\n";
-        return;
+        return -1;
     }
     int x = arr[front];
     if (front == rear) {
